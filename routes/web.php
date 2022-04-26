@@ -35,4 +35,3 @@ Route::middleware('role:Super Admin')->group(function (){
 });
 
 
-
