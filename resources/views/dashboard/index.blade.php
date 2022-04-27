@@ -31,22 +31,22 @@
             </div>
             <ul class="list-group text-center">
                 @can('Category')
-                    <li class="list-group-item"><a href="#">Category</a></li>
+                    <li class="list-group-item"><a href="{{ route('categories.index') }}">Category</a></li>
                 @endcan
                 @can('User')
-                    <li class="list-group-item"><a href="#">User</a></li>
+                    <li class="list-group-item"><a href="{{ route('users.index') }}">User</a></li>
                 @endcan
                 @can('Comment')
-                    <li class="list-group-item"><a href="#">Comment</a></li>
+                    <li class="list-group-item"><a href="{{ route('comments.index') }}">Comment</a></li>
                 @endcan
                 @can('Post')
-                    <li class="list-group-item"><a href="#">Post</a></li>
+                    <li class="list-group-item"><a href="{{ route('posts.index') }}">Post</a></li>
                 @endcan
                 @can('Product')
-                    <li class="list-group-item"><a href="#">Product</a></li>
+                    <li class="list-group-item"><a href="{{ route('products.index') }}">Product</a></li>
                 @endcan
                 @can('Course')
-                    <li class="list-group-item"><a href="#">Course</a></li>
+                    <li class="list-group-item"><a href="{{ route('coursers.index') }}">Course</a></li>
                 @endcan
             </ul>
 

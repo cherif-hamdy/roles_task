@@ -35,7 +35,7 @@ Route::middleware('role:Super Admin')->group(function (){
 });
 
 Route::resource('posts', \App\Http\Controllers\PostController::class)->middleware('permission:Post');
-Route::resource('posts/{id}/comments', \App\Http\Controllers\PostController::class)->middleware('permission:Comment');
+Route::resource('comments', \App\Http\Controllers\PostController::class)->middleware('permission:Comment');
 Route::resource('products', \App\Http\Controllers\PostController::class)->middleware('permission:Product');
 Route::resource('courses', \App\Http\Controllers\PostController::class)->middleware('permission:Course');
 
