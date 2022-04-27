@@ -52,7 +52,6 @@ class AuthController extends Controller
         {
             return redirect()->back()->with('error', 'Invalid Credentials');
         }
-
         Auth::login($user);
         return redirect()->route('dashboard')->with('message', "Welcome Mr {$user->name}");
     }

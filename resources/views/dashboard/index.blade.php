@@ -30,20 +30,24 @@
                 <h3>Dashboard</h3>
             </div>
             <ul class="list-group text-center">
-                @if(in_array('Super Admin', $role))
+                @can('Category')
                     <li class="list-group-item"><a href="#">Category</a></li>
+                @endcan
+                @can('User')
                     <li class="list-group-item"><a href="#">User</a></li>
-                @endif
-                @if(in_array('Super Admin', $role) || in_array('writer', $role))
-                    <li class="list-group-item"><a href="#">Post</a></li>
+                @endcan
+                @can('Comment')
                     <li class="list-group-item"><a href="#">Comment</a></li>
-                @endif
-                @if(in_array('Super Admin', $role) || in_array('sales', $role))
+                @endcan
+                @can('Post')
+                    <li class="list-group-item"><a href="#">Post</a></li>
+                @endcan
+                @can('Product')
                     <li class="list-group-item"><a href="#">Product</a></li>
-                @endif
-                @if(in_array('Super Admin', $role) || in_array('teacher', $role) || in_array('student', $role))
+                @endcan
+                @can('Course')
                     <li class="list-group-item"><a href="#">Course</a></li>
-                @endif
+                @endcan
             </ul>
 
         </div>
