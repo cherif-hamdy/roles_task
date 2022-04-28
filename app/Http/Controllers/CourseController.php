@@ -14,7 +14,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        echo "All Courses";
     }
 
     /**
@@ -24,7 +24,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        echo "Create Course";
     }
 
     /**
@@ -35,7 +35,7 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "Store Course";
     }
 
     /**
@@ -46,7 +46,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+        echo "Show Course";
     }
 
     /**
@@ -57,7 +57,7 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        //
+        echo "Edit Course";
     }
 
     /**
@@ -69,7 +69,7 @@ class CourseController extends Controller
      */
     public function update(Request $request, Course $course)
     {
-        //
+        echo "Update Course";
     }
 
     /**
@@ -80,6 +80,6 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        //
+        echo "Destroy Course";
     }
 }

@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        echo "All Products";
     }
 
     /**
@@ -24,7 +24,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        echo "Create Product";
     }
 
     /**
@@ -35,7 +35,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "Store Product";
     }
 
     /**
@@ -46,7 +46,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        echo "Show Product";
     }
 
     /**
@@ -57,7 +57,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        echo "Edit Product";
     }
 
     /**
@@ -69,7 +69,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        echo "Update Product";
     }
 
     /**
@@ -80,6 +80,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        echo "Delete Product";
     }
 }

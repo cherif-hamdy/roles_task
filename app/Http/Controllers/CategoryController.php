@@ -14,8 +14,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('categories.index', compact('categories'));
+//        $categories = Category::all();
+//        return view('categories.index', compact('categories'));
+        echo "All Categories";
     }
 
     /**
@@ -25,7 +26,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+//        return view('categories.create');
+        echo "Create Category";
     }
 
     /**
@@ -36,13 +38,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $this->validate($request,[
-            'name' => 'required|string'
-        ]);
-
-        Category::create($data);
-
-        return redirect()->route('categories.index')->with('message', 'Added successfully');
+//        $data = $this->validate($request,[
+//            'name' => 'required|string'
+//        ]);
+//
+//        Category::create($data);
+//
+//        return redirect()->route('categories.index')->with('message', 'Added successfully');
+        echo 'Store Category';
     }
 
     /**
@@ -53,7 +56,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return view('categories.show', compact('category'));
+//        return view('categories.show', compact('category'));
+        echo 'Show Category';
     }
 
     /**
@@ -64,7 +68,8 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('categories.edit', compact('category'));
+//        return view('categories.edit', compact('category'));
+        echo "Edit Category";
     }
 
     /**
@@ -76,13 +81,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        $data = $this->validate($request, [
-            'name' => 'required|string'
-        ]);
-
-        $category->update($data);
-
-        return redirect()->route('categories.index')->with('message', 'Updated Successfully');
+//        $data = $this->validate($request, [
+//            'name' => 'required|string'
+//        ]);
+//
+//        $category->update($data);
+//
+//        return redirect()->route('categories.index')->with('message', 'Updated Successfully');
+        echo "Update Category";
     }
 
     /**
@@ -93,7 +99,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        $category->delete();
-        return redirect()->route('categories.index')->with('message', 'Deleted Successfully');
+//        $category->delete();
+//        return redirect()->route('categories.index')->with('message', 'Deleted Successfully');
+        echo "Delete Category";
     }
 }

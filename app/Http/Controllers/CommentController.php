@@ -14,7 +14,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        echo "All Comments";
     }
 
     /**
@@ -24,7 +24,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+        echo "Create Comment";
     }
 
     /**
@@ -35,7 +35,7 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "Store Comment";
     }
 
     /**
@@ -46,7 +46,7 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
-        //
+        echo "Show Comment";
     }
 
     /**
@@ -57,7 +57,7 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        //
+        echo "Edit Comment";
     }
 
     /**
@@ -69,7 +69,7 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        echo "Update Comment";
     }
 
     /**
@@ -80,6 +80,6 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        echo "Destroy Comment";
     }
 }

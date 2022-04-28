@@ -46,7 +46,7 @@
                     <li class="list-group-item"><a href="{{ route('products.index') }}">Product</a></li>
                 @endcan
                 @can('Course')
-                    <li class="list-group-item"><a href="{{ route('coursers.index') }}">Course</a></li>
+                    <li class="list-group-item"><a href="{{ route('courses.index') }}">Course</a></li>
                 @endcan
             </ul>
 
