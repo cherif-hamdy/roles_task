@@ -21,14 +21,18 @@ class PermissionsSeeder extends Seeder
 
         //create permissions
         Permission::firstOrCreate(['name' => 'Post']);
-        Permission::firstOrCreate(['name' => 'Category']);
+        Permission::firstOrCreate(['guard_name' => 'admin','name' => 'Post']);
+        Permission::firstOrCreate(['guard_name' => 'admin','name' => 'Category']);
         Permission::firstOrCreate(['name' => 'Comment']);
-        Permission::firstOrCreate(['name' => 'User']);
+        Permission::firstOrCreate(['guard_name' => 'admin','name' => 'Comment']);
+        Permission::firstOrCreate(['guard_name' => 'admin','name' => 'User']);
         Permission::firstOrCreate(['name' => 'Product']);
+        Permission::firstOrCreate(['guard_name' => 'admin','name' => 'Product']);
         Permission::firstOrCreate(['name' => 'Course']);
+        Permission::firstOrCreate(['guard_name' => 'admin','name' => 'Course']);
 
         //create roles
-        $role1 = Role::firstOrCreate(['name'=>'Super Admin']);
+        $role1 = Role::firstOrCreate(['guard_name' => 'admin','name'=>'Super Admin']);
         $role1->givePermissionTo('Post');
         $role1->givePermissionTo('Category');
         $role1->givePermissionTo('Comment');
@@ -49,7 +53,7 @@ class PermissionsSeeder extends Seeder
         $role5 = Role::firstOrCreate(['name'=>'student']);
         $role5->givePermissionTo('Course');
 
-        $user = \App\Models\User::factory()->create([
+        $user = \App\Models\Admin::factory()->create([
             'name' => 'admin',
             'email' => 'admin@example.com',
         ]);

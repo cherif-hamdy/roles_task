@@ -28,6 +28,14 @@ Route::middleware('auth')->group(function (){
     Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
     Route::get('/dashboard', [\App\Http\Controllers\AuthController::class, 'dashboard'])->name('dashboard');
 });
+Route::middleware('guest:admin')->prefix('admin')->group(function (){
+    Route::get('/login', [\App\Http\Controllers\Admin\AuthController::class, 'showAdminLogin'])->name('admin.login');
+    Route::post('/login', [\App\Http\Controllers\Admin\AuthController::class, 'adminLogin'])->name('admin.doLogin');
+});
+Route::middleware('auth:admin')->prefix('admin')->group(function (){
+    Route::get('/logout', [\App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('admin.logout');
+    Route::get('/', [\App\Http\Controllers\Admin\AuthController::class, 'adminDashboard'])->name('admin.dashboard');
+});
 
 Route::middleware('role:Super Admin')->group(function (){
     Route::resource('users', \App\Http\Controllers\UserController::class);
